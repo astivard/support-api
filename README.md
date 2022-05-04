@@ -1,9 +1,9 @@
 # "Support" API
 
-### URLs (allowed methods are indicated in brackets):
+## URLs (allowed methods are indicated in brackets):
 
 ```
-/api/v1/register/                       <- user registration (POST)
+/api/v1/registration/                   <- user registration (POST)
 
 /api/v1/token/                          <- getting access and refresh tokens (POST) 
 
@@ -17,5 +17,4 @@
 
 /api/v1/ticket/{ticket_pk}/messages/    <- receiving and creating ticket messages (GET, POST)
 ```
-
 
