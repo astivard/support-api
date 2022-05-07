@@ -27,8 +27,8 @@ class Ticket(models.Model):
     FROZEN = 'FROZEN'
 
     STATUS_CHOICES = [
-        (UNSOLVED, 'SOLVED'),
-        (SOLVED, 'UNSOLVED'),
+        (UNSOLVED, 'UNSOLVED'),
+        (SOLVED, 'SOLVED'),
         (FROZEN, 'FROZEN'),
     ]
     status = models.CharField(
