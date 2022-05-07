@@ -18,7 +18,7 @@ class TicketViewSet(mixins.CreateModelMixin,
     """
 
     serializer_class = TicketSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = (IsAuthenticated, )
 
     def get_queryset(self):
         return Ticket.objects.all().filter(client=self.request.user)
@@ -34,7 +34,7 @@ class MessageViewSet(MessageViewSetMethods,
     """
 
     serializer_class = MessageSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = (IsAuthenticated, )
 
     def get_queryset(self):
         return Message.objects.filter(ticket=self.kwargs['ticket_pk'])
@@ -52,4 +52,4 @@ class UserRegistrationViewSet(viewsets.ModelViewSet):
 
     queryset = User.objects.all()
     serializer_class = UserRegistrationSerializer
-    permission_classes = [AllowAny]
+    permission_classes = (AllowAny, )
